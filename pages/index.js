@@ -4,12 +4,12 @@ import Page2 from "./Page2";
  
 import { useExperiment } from "@tstmkrs/nextjs-ab-test";
 
-const TestExperiment = () => {
+export default function TestExperiment () {
 	const { Variant } = useExperiment({
 		name: "Experiment-test",
 		variants: {
-			A: <div><Page1 /></div>,
-			B: <div><Page2 /></div>
+			A: <Page1 />,
+			B: <Page2 />
 		}
 	});
 
